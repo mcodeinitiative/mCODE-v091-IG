@@ -8,25 +8,20 @@
 <p>System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code.</p>
 </div>
   </text>
-  <url value="http://hl7.org/fhir/us/mcode/onco/core/vs/CancerStagingSystemVS"/>
-  <identifier>
-    <system value="http://hl7.org/fhir/us/mcode"/>
-    <value value="onco.core.CancerStagingSystemVS"/>
-  </identifier>
-  <version value="0.9.0"/>
+  <url value="http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerStagingSystemVS"/>
+  <version value="0.9.1"/>
   <name value="CancerStagingSystemVS"/>
+  <title value="CancerStagingSystemVS"/>
   <status value="draft"/>
-  <publisher value="The MITRE Corporation"/>
+  <date value="2019-08-01T00:00:00-04:00"/>
+  <publisher value="HL7 International Clinical Interoperability Council"/>
   <contact>
     <telecom>
-      <system value="other"/>
-      <value value="http://standardhealthrecord.org"/>
-      <rank value="0"/>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cic"/>
     </telecom>
   </contact>
-  <date value="2019-04-17T00:00:00-04:00"/>
   <description value="System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text &#39;AJCC Version 8&#39; in the text sub-field of the code structure, and omit the code."/>
-  <immutable value="false"/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>

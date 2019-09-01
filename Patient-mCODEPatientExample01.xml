@@ -3,7 +3,7 @@
 <Patient xmlns="http://hl7.org/fhir">
   <id value="mCODEPatientExample01"/>
   <meta>
-    <profile value="http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"/>
+    <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
@@ -27,7 +27,7 @@
 			<p>
 				<b>address</b>: 123 Main St Anytown MA 12345 US </p>
 			<p>
-				<b>race</b>: White</p>
+				<b>race</b>: Black</p>
 			<p>
 				<b>ethnicity</b>: Not Hispanic or Latino</p>
 		</div>
@@ -40,6 +40,9 @@
         <display value="Black or African American"/>
       </valueCoding>
     </extension>
+    <extension url="text">
+      <valueString value="Black"/>
+    </extension>
   </extension>
   <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
     <extension url="ombCategory">
@@ -49,6 +52,9 @@
         <display value="Not Hispanic or Latino"/>
       </valueCoding>
     </extension>
+    <extension url="text">
+      <valueString value="Not Latino"/>
+    </extension>
   </extension>
   <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
     <valueCode value="M"/>
@@ -57,7 +63,7 @@
     <use value="usual"/>
     <type>
       <coding>
-        <system value="http://hl7.org/fhir/v2/0203"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
         <code value="MR"/>
         <display value="Medical Record Number"/>
       </coding>

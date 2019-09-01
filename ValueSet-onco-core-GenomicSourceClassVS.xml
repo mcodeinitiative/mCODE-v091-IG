@@ -8,25 +8,20 @@
 <p>The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome.</p>
 </div>
   </text>
-  <url value="http://hl7.org/fhir/us/mcode/onco/core/vs/GenomicSourceClassVS"/>
-  <identifier>
-    <system value="http://hl7.org/fhir/us/mcode"/>
-    <value value="onco.core.GenomicSourceClassVS"/>
-  </identifier>
-  <version value="0.9.0"/>
+  <url value="http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GenomicSourceClassVS"/>
+  <version value="0.9.1"/>
   <name value="GenomicSourceClassVS"/>
+  <title value="GenomicSourceClassVS"/>
   <status value="draft"/>
-  <publisher value="The MITRE Corporation"/>
+  <date value="2019-08-01T00:00:00-04:00"/>
+  <publisher value="HL7 International Clinical Interoperability Council"/>
   <contact>
     <telecom>
-      <system value="other"/>
-      <value value="http://standardhealthrecord.org"/>
-      <rank value="0"/>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cic"/>
     </telecom>
   </contact>
-  <date value="2019-04-17T00:00:00-04:00"/>
   <description value="The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome."/>
-  <immutable value="false"/>
   <compose>
     <include>
       <system value="http://loinc.org"/>

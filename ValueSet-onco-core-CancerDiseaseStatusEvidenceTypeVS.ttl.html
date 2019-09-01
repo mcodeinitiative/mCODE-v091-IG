@@ -4,11 +4,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  
-  <title>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0</title>
+  <title>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0 FHIR Profiles" />
+  <meta name="description" content="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1" />
 
   <link href="fhir.css" rel="stylesheet" />
 
@@ -40,13 +39,12 @@
       <img alt="HL7 FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png" />
     </a>
     <div id="hl7-status" class="hl7-status">
-      
-      <b>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0</b>
+      <b>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1</b>
     </div>
 
     <div id="hl7-nav">
       <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
-        <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png" />
+        <img height="50" alt="visit the hl7 website" width="91" src="assets/images/hl7-logo.png" />
       </a>
     </div>
   </div>
@@ -70,7 +68,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-        <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2/index.html">FHIR</a>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
         <div class="nav-collapse collapse navbar-inverse-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
@@ -78,10 +76,13 @@
             <li><a href="profiles.html">Profiles</a></li>
             <li><a href="extensions.html">Extensions</a></li>
             <li><a href="valuesets.html">Value Sets</a></li>
-            <!-- no code systems (DSTU2) -->
+            <li><a href="codesystems.html">Code Systems</a></li>
+            <!-- no search parameters -->
+            <!-- no operation definitions -->
+            <!-- no conformance / capability statements -->
             <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="modeldoc.html">Reference Model</a></li>
-            
+            <!-- no reference model -->
+            <li><a href="http://hl7.org/fhir/us/mcode/history.html">History</a></li>
           </ul>
 
         </div>
@@ -122,7 +123,7 @@
    <div class="row">
      <div class="inner-wrapper">
        <div class="col-12">
-       <!--ReleaseHeader--><p id="publish-box"> - Local Development build (v0.9.0). See the <a href="http://hl7.org/fhir/us/shr/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+       <!--ReleaseHeader--><p id="publish-box">HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1 - Local Development build (v0.9.1). See the <a href="http://hl7.org/fhir/us/mcode/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
 
 <!-- ============CONTENT CONTENT=============== -->
 
@@ -150,55 +151,50 @@
 # - resource -------------------------------------------------------------------
 
  a fhir:ValueSet;
-  <a href="http://hl7.org/fhir/DSTU2/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.id">fhir:ValueSet.id</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">fhir:value</a> &quot;onco-core-CancerDiseaseStatusEvidenceTypeVS&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.text">fhir:ValueSet.text</a> [
-     <a href="http://hl7.org/fhir/DSTU2/narrative.html#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;onco-core-CancerDiseaseStatusEvidenceTypeVS&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
      fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n&lt;p&gt;&lt;b&gt;CancerDiseaseStatusEvidenceTypeVS ValueSet&lt;/b&gt;&lt;/p&gt;\n&lt;p&gt;The type of evidence backing up the clinical determination of cancer progression.&lt;/p&gt;\n&lt;/div&gt;&quot;
   ];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/mcode/onco/core/vs/CancerDiseaseStatusEvidenceTypeVS&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.identifier">fhir:ValueSet.identifier</a> [
-     <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/mcode&quot; ];
-     <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;onco.core.CancerDiseaseStatusEvidenceTypeVS&quot; ]
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDiseaseStatusEvidenceTypeVS&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.9.1&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CancerDiseaseStatusEvidenceTypeVS&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CancerDiseaseStatusEvidenceTypeVS&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2019-08-01T00:00:00-04:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">fhir:ValueSet.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 International Clinical Interoperability Council&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">fhir:ValueSet.contact</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;url&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;http://www.hl7.org/Special/committees/cic&quot; ]     ]
   ];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;0.9.0&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;CancerDiseaseStatusEvidenceTypeVS&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.publisher">fhir:ValueSet.publisher</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;The MITRE Corporation&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.contact">fhir:ValueSet.contact</a> [
-     <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.contact.telecom">fhir:ValueSet.contact.telecom</a> [
-       <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;other&quot; ];
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;http://standardhealthrecord.org&quot; ];
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#ContactPoint#ContactPoint.rank">fhir:ContactPoint.rank</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#positiveInt">fhir:value</a> &quot;0&quot;^^xsd:positiveInteger ]     ]
-  ];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">fhir:value</a> &quot;2019-04-17T00:00:00-04:00&quot;^^xsd:dateTime];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;The type of evidence backing up the clinical determination of cancer progression.&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.immutable">fhir:ValueSet.immutable</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean];
-  <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
-     <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
-       <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ];
-       <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept">fhir:ValueSet.compose.include.concept</a> [
-         <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0;
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;363679005&quot; ];
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;Imaging (procedure)&quot; ]       ], [
-         <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 1;
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;252416005&quot; ];
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;Histopathology test (procedure)&quot; ]       ], [
-         <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 2;
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;711015009&quot; ];
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;Assessment of symptom control (procedure)&quot; ]       ], [
-         <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 3;
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;5880005&quot; ];
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;Physical examination procedure (procedure)&quot; ]       ], [
-         <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 4;
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;250724005&quot; ];
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;Tumor marker measurement (procedure)&quot; ]       ], [
-         <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 5;
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;386344002&quot; ];
-         <a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;Laboratory data interpretation (procedure)&quot; ]       ]     ]
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;The type of evidence backing up the clinical determination of cancer progression.&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ];
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">fhir:ValueSet.compose.include.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;363679005&quot; ];
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Imaging (procedure)&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;252416005&quot; ];
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Histopathology test (procedure)&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;711015009&quot; ];
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Assessment of symptom control (procedure)&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;5880005&quot; ];
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Physical examination procedure (procedure)&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;250724005&quot; ];
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Tumor marker measurement (procedure)&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;386344002&quot; ];
+         <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Laboratory data interpretation (procedure)&quot; ]       ]     ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -228,10 +224,28 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      
-      HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0, Version: 0.9.0
-      ; <a style="color: #81BEF7" href="http://hl7.org/fhir/DSTU2/">FHIR &copy; Version: 1.0.2</a>
-      ; Generated on Wed, Apr 17, 2019 12:01-0400.
+      &copy;2019+
+      <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/cic">HL7 International Clinical Interoperability Council</a>.
+      Package hl7.fhir.us.mcode#0.9.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.0</a>.
+      Generated <span title="Sat, Aug 31, 2019 10:06-0400">2019-08-31</span>.
+      <br/>
+      <span style="color: #FFFF77">
+        Links:
+        <a style="color: #81BEF7" href="index.html">Home</a>
+        | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+        | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/mcode/history.html">
+          Version History
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+        | <a style="color: #81BEF7" target="_blank" rel="license" href="http://hl7.org/fhir/R4/license.html">
+          <img style="border-style: none;" alt="CC0" src="cc0.png">
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+        | <a style="color: #81BEF7" target= "_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">
+          Propose a change
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+      </span>
     </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

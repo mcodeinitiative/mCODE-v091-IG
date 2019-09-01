@@ -5,34 +5,29 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/shr/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS> a fhir:ValueSet;
+<http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
-  fhir:ValueSet.id [ fhir:value "onco-core-CancerRelatedSurgicalProcedureVS"];
-  fhir:ValueSet.text [
+  fhir:Resource.id [ fhir:value "onco-core-CancerRelatedSurgicalProcedureVS"];
+  fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerRelatedSurgicalProcedureVS ValueSet</b></p>\n<p>Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.</p>\n</div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerRelatedSurgicalProcedureVS ValueSet</b></p>\n<p>Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.\n\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).</p>\n</div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/mcode/onco/core/vs/CancerRelatedSurgicalProcedureVS"];
-  fhir:ValueSet.identifier [
-     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/us/mcode" ];
-     fhir:Identifier.value [ fhir:value "onco.core.CancerRelatedSurgicalProcedureVS" ]
-  ];
-  fhir:ValueSet.version [ fhir:value "0.9.0"];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS"];
+  fhir:ValueSet.version [ fhir:value "0.9.1"];
   fhir:ValueSet.name [ fhir:value "CancerRelatedSurgicalProcedureVS"];
+  fhir:ValueSet.title [ fhir:value "CancerRelatedSurgicalProcedureVS"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.publisher [ fhir:value "The MITRE Corporation"];
+  fhir:ValueSet.date [ fhir:value "2019-08-01T00:00:00-04:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International Clinical Interoperability Council"];
   fhir:ValueSet.contact [
      fhir:index 0;
-     fhir:ValueSet.contact.telecom [
+     fhir:ContactDetail.telecom [
        fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "other" ];
-       fhir:ContactPoint.value [ fhir:value "http://standardhealthrecord.org" ];
-       fhir:ContactPoint.rank [ fhir:value "0"^^xsd:positiveInteger ]
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cic" ]
      ]
   ];
-  fhir:ValueSet.date [ fhir:value "2019-04-17T00:00:00-04:00"^^xsd:dateTime];
-  fhir:ValueSet.description [ fhir:value "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used."];
-  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.description [ fhir:value "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.\n\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
@@ -303,7 +298,7 @@
          fhir:ValueSet.compose.include.concept.display [ fhir:value "Hepatectomy" ]
        ], [
          fhir:index 66;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "13600000000000000" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13580001000004101" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "Excision of tumor of liver" ]
        ], [
          fhir:index 67;
@@ -751,9 +746,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/shr/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/shr/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/mcode/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS.ttl> .
 
 # -------------------------------------------------------------------------------------
 

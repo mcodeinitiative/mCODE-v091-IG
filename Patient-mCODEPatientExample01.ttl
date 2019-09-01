@@ -5,22 +5,23 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/shr/Patient/mCODEPatientExample01> a fhir:Patient;
+<http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Patient.id [ fhir:value "mCODEPatientExample01"];
-  fhir:Patient.meta [
+  fhir:Resource.id [ fhir:value "mCODEPatientExample01"];
+  fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient";
-       fhir:index 0
+       fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient>
      ]
   ];
-  fhir:Patient.text [
+  fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>*** mCODE Example: Patient ***</b>\n			</p>\n			<p>\n				<b>id</b>: example</p>\n			<p>\n				<b>identifier</b>: Medical Record Number = m123 (USUAL)</p>\n			<p>\n				<b>name</b>: John B. Anyperson </p>\n			<p>\n				<b>telecom</b>: ph: 555-555-5555(HOME), john.anyperson@example.com</p>\n			<p>\n				<b>gender</b>: male</p>\n			<p>\n				<b>birthsex</b>: M</p>\n			<p>\n				<b>birthDate</b>: Jan 20, 1951</p>\n			<p>\n				<b>address</b>: 123 Main St Anytown MA 12345 US </p>\n			<p>\n				<b>race</b>: White</p>\n			<p>\n				<b>ethnicity</b>: Not Hispanic or Latino</p>\n		</div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>*** mCODE Example: Patient ***</b>\n			</p>\n			<p>\n				<b>id</b>: example</p>\n			<p>\n				<b>identifier</b>: Medical Record Number = m123 (USUAL)</p>\n			<p>\n				<b>name</b>: John B. Anyperson </p>\n			<p>\n				<b>telecom</b>: ph: 555-555-5555(HOME), john.anyperson@example.com</p>\n			<p>\n				<b>gender</b>: male</p>\n			<p>\n				<b>birthsex</b>: M</p>\n			<p>\n				<b>birthDate</b>: Jan 20, 1951</p>\n			<p>\n				<b>address</b>: 123 Main St Anytown MA 12345 US </p>\n			<p>\n				<b>race</b>: Black</p>\n			<p>\n				<b>ethnicity</b>: Not Hispanic or Latino</p>\n		</div>"
   ];
-  fhir:Patient.extension [
+  fhir:DomainResource.extension [
      fhir:index 0;
-     fhir:Extension.extension [
+     fhir:Element.extension [
        fhir:index 0;
        fhir:Extension.url [ fhir:value "ombCategory" ];
        fhir:Extension.valueCoding [
@@ -28,11 +29,15 @@
          fhir:Coding.code [ fhir:value "2054-5" ];
          fhir:Coding.display [ fhir:value "Black or African American" ]
        ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Black" ]
      ];
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" ]
   ], [
      fhir:index 1;
-     fhir:Extension.extension [
+     fhir:Element.extension [
        fhir:index 0;
        fhir:Extension.url [ fhir:value "ombCategory" ];
        fhir:Extension.valueCoding [
@@ -40,6 +45,10 @@
          fhir:Coding.code [ fhir:value "2186-5" ];
          fhir:Coding.display [ fhir:value "Not Hispanic or Latino" ]
        ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Not Latino" ]
      ];
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" ]
   ], [
@@ -53,7 +62,7 @@
      fhir:Identifier.type [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
          fhir:Coding.code [ fhir:value "MR" ];
          fhir:Coding.display [ fhir:value "Medical Record Number" ]
        ];
@@ -64,10 +73,7 @@
   ];
   fhir:Patient.name [
      fhir:index 0;
-     fhir:HumanName.family [
-       fhir:value "Anyperson";
-       fhir:index 0
-     ];
+     fhir:HumanName.family [ fhir:value "Anyperson" ];
      fhir:HumanName.given [
        fhir:value "John";
        fhir:index 0
@@ -114,9 +120,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/shr/Patient/mCODEPatientExample01.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/shr/Patient/mCODEPatientExample01.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/mcode/Patient/mCODEPatientExample01.ttl> .
 
 # -------------------------------------------------------------------------------------
 

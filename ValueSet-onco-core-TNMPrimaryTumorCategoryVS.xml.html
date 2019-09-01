@@ -4,11 +4,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  
-  <title>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0</title>
+  <title>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0 FHIR Profiles" />
+  <meta name="description" content="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1" />
 
   <link href="fhir.css" rel="stylesheet" />
 
@@ -40,13 +39,12 @@
       <img alt="HL7 FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png" />
     </a>
     <div id="hl7-status" class="hl7-status">
-      
-      <b>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0</b>
+      <b>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1</b>
     </div>
 
     <div id="hl7-nav">
       <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
-        <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png" />
+        <img height="50" alt="visit the hl7 website" width="91" src="assets/images/hl7-logo.png" />
       </a>
     </div>
   </div>
@@ -70,7 +68,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-        <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2/index.html">FHIR</a>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
         <div class="nav-collapse collapse navbar-inverse-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
@@ -78,10 +76,13 @@
             <li><a href="profiles.html">Profiles</a></li>
             <li><a href="extensions.html">Extensions</a></li>
             <li><a href="valuesets.html">Value Sets</a></li>
-            <!-- no code systems (DSTU2) -->
+            <li><a href="codesystems.html">Code Systems</a></li>
+            <!-- no search parameters -->
+            <!-- no operation definitions -->
+            <!-- no conformance / capability statements -->
             <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="modeldoc.html">Reference Model</a></li>
-            
+            <!-- no reference model -->
+            <li><a href="http://hl7.org/fhir/us/mcode/history.html">History</a></li>
           </ul>
 
         </div>
@@ -122,7 +123,7 @@
    <div class="row">
      <div class="inner-wrapper">
        <div class="col-12">
-       <!--ReleaseHeader--><p id="publish-box"> - Local Development build (v0.9.0). See the <a href="http://hl7.org/fhir/us/shr/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+       <!--ReleaseHeader--><p id="publish-box">HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1 - Local Development build (v0.9.1). See the <a href="http://hl7.org/fhir/us/mcode/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
 
 <!-- ============CONTENT CONTENT=============== -->
 
@@ -143,44 +144,44 @@
 
 <pre class="xml">
 
-&lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">value</a>=&quot;onco-core-TNMPrimaryTumorCategoryVS&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/DSTU2/narrative.html#Narrative.status">status</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+&lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;onco-core-TNMPrimaryTumorCategoryVS&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
 &lt;p&gt;&lt;b&gt;TNMPrimaryTumorCategoryVS ValueSet&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
 
 * AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
-* SNOMED CT has content related to the T category under the hierarchy of 385356007 'Tumor stage finding', such as 23351008 'T1 category' and 261650005 'Tumor stage T1c'. If using SNOMED-CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 'T1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).&lt;/p&gt;
+* SNOMED CT has content related to the T category under the hierarchy of 385356007 'Tumor stage finding', such as 23351008 'T1 category' and 261650005 'Tumor stage T1c'. If using SNOMED CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 'T1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).&lt;/p&gt;
 &lt;/div&gt;
   &lt;/text&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.url">url</a>
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/mcode/onco/core/vs/TNMPrimaryTumorCategoryVS&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/DSTU2/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/mcode&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/DSTU2/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">value</a>=&quot;onco.core.TNMPrimaryTumorCategoryVS&quot;/&gt;
-  &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">value</a>=&quot;0.9.0&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">value</a>=&quot;TNMPrimaryTumorCategoryVS&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">value</a>=&quot;The MITRE Corporation&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.contact">contact</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.contact.telecom">telecom</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/DSTU2/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">value</a>=&quot;other&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/DSTU2/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">value</a>=&quot;http://standardhealthrecord.org&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/DSTU2/datatypes.html#ContactPoint#ContactPoint.rank">rank</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#positiveInt">value</a>=&quot;0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/mcode/ValueSet/onco-core-TNMPrimaryTumorCategoryVS&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.9.1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;TNMPrimaryTumorCategoryVS&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;TNMPrimaryTumorCategoryVS&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-08-01T00:00:00-04:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International Clinical Interoperability Council&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://www.hl7.org/Special/committees/cic&quot;/&gt;
     &lt;/telecom&gt;
   &lt;/contact&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">value</a>=&quot;2019-04-17T00:00:00-04:00&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.description">description</a>
-               <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">value</a>=&quot;This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
 
 * AJCC terminology: examples of T categories include &amp;#39;cTX&amp;#39;, used when the tumor primary tumor cannot be evaluated, &amp;#39;pT0&amp;#39;, denoting there is no evidence of a primary tumor, and &amp;#39;pTis&amp;#39;, referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
-* SNOMED CT has content related to the T category under the hierarchy of 385356007 &amp;#39;Tumor stage finding&amp;#39;, such as 23351008 &amp;#39;T1 category&amp;#39; and 261650005 &amp;#39;Tumor stage T1c&amp;#39;. If using SNOMED-CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 &amp;#39;T1 category&amp;#39;). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/DSTU2/valueset.html#ValueSet.immutable">immutable</a> <a href="http://hl7.org/fhir/DSTU2/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+* SNOMED CT has content related to the T category under the hierarchy of 385356007 &amp;#39;Tumor stage finding&amp;#39;, such as 23351008 &amp;#39;T1 category&amp;#39; and 261650005 &amp;#39;Tumor stage T1c&amp;#39;. If using SNOMED CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 &amp;#39;T1 category&amp;#39;). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://cancerstaging.org&quot;/&gt;
+    &lt;/include&gt;
+  &lt;/compose&gt;
 &lt;/ValueSet&gt;</pre>
 
 
@@ -202,10 +203,28 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      
-      HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0, Version: 0.9.0
-      ; <a style="color: #81BEF7" href="http://hl7.org/fhir/DSTU2/">FHIR &copy; Version: 1.0.2</a>
-      ; Generated on Wed, Apr 17, 2019 12:01-0400.
+      &copy;2019+
+      <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/cic">HL7 International Clinical Interoperability Council</a>.
+      Package hl7.fhir.us.mcode#0.9.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.0</a>.
+      Generated <span title="Sat, Aug 31, 2019 10:06-0400">2019-08-31</span>.
+      <br/>
+      <span style="color: #FFFF77">
+        Links:
+        <a style="color: #81BEF7" href="index.html">Home</a>
+        | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+        | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/mcode/history.html">
+          Version History
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+        | <a style="color: #81BEF7" target="_blank" rel="license" href="http://hl7.org/fhir/R4/license.html">
+          <img style="border-style: none;" alt="CC0" src="cc0.png">
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+        | <a style="color: #81BEF7" target= "_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">
+          Propose a change
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+      </span>
     </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
