@@ -4,11 +4,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  
-  <title>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0</title>
+  <title>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0 FHIR Profiles" />
+  <meta name="description" content="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1" />
 
   <link href="fhir.css" rel="stylesheet" />
 
@@ -40,13 +39,12 @@
       <img alt="HL7 FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png" />
     </a>
     <div id="hl7-status" class="hl7-status">
-      
-      <b>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0</b>
+      <b>HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1</b>
     </div>
 
     <div id="hl7-nav">
       <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
-        <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png" />
+        <img height="50" alt="visit the hl7 website" width="91" src="assets/images/hl7-logo.png" />
       </a>
     </div>
   </div>
@@ -70,7 +68,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-        <a class="navbar-brand hidden" href="http://hl7.org/fhir/DSTU2/index.html">FHIR</a>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
         <div class="nav-collapse collapse navbar-inverse-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
@@ -78,10 +76,13 @@
             <li><a href="profiles.html">Profiles</a></li>
             <li><a href="extensions.html">Extensions</a></li>
             <li><a href="valuesets.html">Value Sets</a></li>
-            <!-- no code systems (DSTU2) -->
+            <li><a href="codesystems.html">Code Systems</a></li>
+            <!-- no search parameters -->
+            <!-- no operation definitions -->
+            <!-- no conformance / capability statements -->
             <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="modeldoc.html">Reference Model</a></li>
-            
+            <!-- no reference model -->
+            <li><a href="http://hl7.org/fhir/us/mcode/history.html">History</a></li>
           </ul>
 
         </div>
@@ -103,7 +104,7 @@
     <!-- container -->
     <ul class="breadcrumb">
       <li title="home"><a href="index.html"><b>Home</b></a></li>
-      <li><b>Observation mCODETNMClinicalPrimaryTumorCategoryExample01 Example</b></li>
+      <li><b>Observation/mCODETNMClinicalPrimaryTumorCategoryExample01 Example</b></li>
     </ul>
   </div>
   <!-- /container -->
@@ -118,7 +119,7 @@
    <div class="row">
      <div class="inner-wrapper">
        <div class="col-12">
-       <!--ReleaseHeader--><p id="publish-box"> - Local Development build (v0.9.0). See the <a href="http://hl7.org/fhir/us/shr/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+       <!--ReleaseHeader--><p id="publish-box">HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1 - Local Development build (v0.9.1). See the <a href="http://hl7.org/fhir/us/mcode/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
 
 <!-- ============CONTENT CONTENT=============== -->
 
@@ -147,50 +148,52 @@
 # - resource -------------------------------------------------------------------
 
  a fhir:Observation;
-  <a href="http://hl7.org/fhir/DSTU2/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.id">fhir:Observation.id</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#id">fhir:value</a> &quot;mCODETNMClinicalPrimaryTumorCategoryExample01&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.meta">fhir:Observation.meta</a> [
-     <a href="http://hl7.org/fhir/DSTU2/resource.html#meta#Meta.profile">fhir:Meta.profile</a> [
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-TNMClinicalPrimaryTumorCategory&quot;;
-       <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0     ]
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mCODETNMClinicalPrimaryTumorCategoryExample01&quot;];
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-TNMClinicalPrimaryTumorCategory&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-TNMClinicalPrimaryTumorCategory&gt;     ]
   ];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.text">fhir:Observation.text</a> [
-     <a href="http://hl7.org/fhir/DSTU2/narrative.html#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;*** mCODE Example: TNM Primary Tumor Category ***&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Name&lt;/b&gt;: John B. Anyperson &lt;/p&gt;&lt;p&gt;&lt;b&gt;MRN&lt;/b&gt;: m123 &lt;/p&gt;&lt;p&gt;&lt;b&gt;Date&lt;/b&gt;: 04/01/19 &lt;/p&gt;&lt;p&gt;&lt;b&gt;Cancer staging system&lt;/b&gt;: AJCC Version 8&lt;/p&gt;&lt;p&gt;&lt;b&gt;T category&lt;/b&gt;: T3&lt;/p&gt;&lt;/div&gt;&quot;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;*** mCODE Example: TNM Primary Tumor Category ***&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Name&lt;/b&gt;: John B. Anyperson &lt;/p&gt;&lt;p&gt;&lt;b&gt;MRN&lt;/b&gt;: m123 &lt;/p&gt;&lt;p&gt;&lt;b&gt;Date&lt;/b&gt;: 04/01/19 &lt;/p&gt;&lt;p&gt;&lt;b&gt;Cancer staging system&lt;/b&gt;: AJCC Version 8&lt;/p&gt;&lt;p&gt;&lt;b&gt;T category&lt;/b&gt;: cT3&lt;/p&gt;&lt;/div&gt;&quot;
   ];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.extension">fhir:Observation.extension</a> [
-     <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/DSTU2/extensibility.html#extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-PrimaryCancerCondition-extension&quot; ]
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;];
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.category">fhir:Observation.category</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;laboratory&quot; ]     ]
   ];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.status">fhir:Observation.status</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;final&quot;];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.category">fhir:Observation.category</a> [
-     <a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
-       <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot; ];
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;laboratory&quot; ]     ]
-  ];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.code">fhir:Observation.code</a> [
-     <a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
-       <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0;
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:Observation.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
        a loinc:21905-5;
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;21905-5&quot; ];
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;Primary tumor.clinical [Class] Cancer&quot; ]     ]
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;21905-5&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Primary tumor.clinical [Class] Cancer&quot; ]     ]
   ];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.subject">fhir:Observation.subject</a> [
-     <a href="http://hl7.org/fhir/DSTU2/references.html#reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;Patient/mCODEPatientExample01&quot; ];
-     <a href="http://hl7.org/fhir/DSTU2/references.html#reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;John B. Anyperson&quot; ]
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:Observation.subject</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/mCODEPatientExample01&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;John B. Anyperson&quot; ]
   ];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.effective[x]">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#dateTime">fhir:value</a> &quot;2019-04-01&quot;^^xsd:date];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.value[x]">fhir:Observation.valueCodeableConcept</a> [
-     <a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
-       <a href="http://hl7.org/fhir/DSTU2/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#uri">fhir:value</a> &quot;https://cancerstaging.org&quot; ];
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#code">fhir:value</a> &quot;T3&quot; ];
-       <a href="http://hl7.org/fhir/DSTU2/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;T3&quot; ]     ]
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">fhir:Observation.focus</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Condition/mCODEPrimaryCancerConditionExample01&quot; ]
   ];
-  <a href="http://hl7.org/fhir/DSTU2/observation.html#Observation.method">fhir:Observation.method</a> [
-     <a href="http://hl7.org/fhir/DSTU2/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/DSTU2/datatypes.html#string">fhir:value</a> &quot;AJCC Version 8&quot; ]
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">fhir:Observation.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2019-04-01&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">fhir:Observation.valueCodeableConcept</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://cancerstaging.org&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;cT3&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;T3&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.method">fhir:Observation.method</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;AJCC Version 8&quot; ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -220,10 +223,28 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      
-      HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.0, Version: 0.9.0
-      ; <a style="color: #81BEF7" href="http://hl7.org/fhir/DSTU2/">FHIR &copy; Version: 1.0.2</a>
-      ; Generated on Wed, Apr 17, 2019 12:01-0400.
+      &copy;2019+
+      <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/cic">HL7 International Clinical Interoperability Council</a>.
+      Package hl7.fhir.us.mcode#0.9.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.0</a>.
+      Generated <span title="Sat, Aug 31, 2019 10:06-0400">2019-08-31</span>.
+      <br/>
+      <span style="color: #FFFF77">
+        Links:
+        <a style="color: #81BEF7" href="index.html">Home</a>
+        | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+        | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/mcode/history.html">
+          Version History
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+        | <a style="color: #81BEF7" target="_blank" rel="license" href="http://hl7.org/fhir/R4/license.html">
+          <img style="border-style: none;" alt="CC0" src="cc0.png">
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+        | <a style="color: #81BEF7" target= "_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">
+          Propose a change
+          <img alt="external" style="text-align: baseline" src="external.png">
+        </a>
+      </span>
     </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

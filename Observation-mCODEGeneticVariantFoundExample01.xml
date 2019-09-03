@@ -3,7 +3,7 @@
 <Observation xmlns="http://hl7.org/fhir">
   <id value="mCODEGeneticVariantFoundExample01"/>
   <meta>
-    <profile value="http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-GeneticVariantFound"/>
+    <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticVariantFound"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
@@ -43,7 +43,7 @@
   <effectiveDateTime value="2019-04-01"/>
   <method>
     <coding>
-      <system value="https://ncit.nci.nih.gov"/>
+      <system value="http://ncit.nci.nih.gov"/>
       <code value="C101293"/>
       <display value="Next Generation Sequencing"/>
     </coding>
@@ -58,7 +58,7 @@
     </code>
     <valueCodeableConcept>
       <coding>
-        <system value="http://hl7.org/fhir/us/mcode/onco-core/vs/GenomicSourceClassVS"/>
+        <system value="http://loinc.org"/>
         <code value="LA6684-0"/>
         <display value="Somatic"/>
       </coding>
@@ -70,12 +70,12 @@
       <coding>
         <system value="http://loinc.org"/>
         <code value="48003-8"/>
-        <display value="DNA sequence variation identifier"/>
+        <display value="DNA sequence variation identifier [Identifier]"/>
       </coding>
     </code>
     <valueCodeableConcept>
       <coding>
-        <system value="https://www.ncbi.nlm.nih.gov/clinvar"/>
+        <system value="http://www.ncbi.nlm.nih.gov/clinvar/"/>
         <code value="619728"/>
         <display value="NM_000455.4(STK11):c.725G&gt;A (p.Gly242Glu)"/>
       </coding>
@@ -90,21 +90,14 @@
         <display value="Genomic structural variant name"/>
       </coding>
     </code>
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://varnomen.hgvs.org"/>
-        <code value="NM_000455.4:c.725G&gt;A"/>
-        <display value="NM_000455.4:c.725G&gt;A"/>
-      </coding>
-      <text value="G242E"/>
-    </valueCodeableConcept>
+    <valueString value="NM_000455.4:c.725G&gt;A"/>
   </component>
   <component>
     <code>
       <coding>
         <system value="http://loinc.org"/>
         <code value="47998-0"/>
-        <display value="DNA sequence variation display name"/>
+        <display value="DNA sequence variation display name [Text] Narrative"/>
       </coding>
     </code>
     <valueString value="G242E"/>

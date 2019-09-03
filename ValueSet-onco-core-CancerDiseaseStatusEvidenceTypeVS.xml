@@ -8,25 +8,20 @@
 <p>The type of evidence backing up the clinical determination of cancer progression.</p>
 </div>
   </text>
-  <url value="http://hl7.org/fhir/us/mcode/onco/core/vs/CancerDiseaseStatusEvidenceTypeVS"/>
-  <identifier>
-    <system value="http://hl7.org/fhir/us/mcode"/>
-    <value value="onco.core.CancerDiseaseStatusEvidenceTypeVS"/>
-  </identifier>
-  <version value="0.9.0"/>
+  <url value="http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDiseaseStatusEvidenceTypeVS"/>
+  <version value="0.9.1"/>
   <name value="CancerDiseaseStatusEvidenceTypeVS"/>
+  <title value="CancerDiseaseStatusEvidenceTypeVS"/>
   <status value="draft"/>
-  <publisher value="The MITRE Corporation"/>
+  <date value="2019-08-01T00:00:00-04:00"/>
+  <publisher value="HL7 International Clinical Interoperability Council"/>
   <contact>
     <telecom>
-      <system value="other"/>
-      <value value="http://standardhealthrecord.org"/>
-      <rank value="0"/>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cic"/>
     </telecom>
   </contact>
-  <date value="2019-04-17T00:00:00-04:00"/>
   <description value="The type of evidence backing up the clinical determination of cancer progression."/>
-  <immutable value="false"/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>

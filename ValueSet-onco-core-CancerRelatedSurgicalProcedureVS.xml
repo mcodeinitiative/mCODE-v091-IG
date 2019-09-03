@@ -5,28 +5,25 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
 <p><b>CancerRelatedSurgicalProcedureVS ValueSet</b></p>
-<p>Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.</p>
+<p>Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.
+
+Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).</p>
 </div>
   </text>
-  <url value="http://hl7.org/fhir/us/mcode/onco/core/vs/CancerRelatedSurgicalProcedureVS"/>
-  <identifier>
-    <system value="http://hl7.org/fhir/us/mcode"/>
-    <value value="onco.core.CancerRelatedSurgicalProcedureVS"/>
-  </identifier>
-  <version value="0.9.0"/>
+  <url value="http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS"/>
+  <version value="0.9.1"/>
   <name value="CancerRelatedSurgicalProcedureVS"/>
+  <title value="CancerRelatedSurgicalProcedureVS"/>
   <status value="draft"/>
-  <publisher value="The MITRE Corporation"/>
+  <date value="2019-08-01T00:00:00-04:00"/>
+  <publisher value="HL7 International Clinical Interoperability Council"/>
   <contact>
     <telecom>
-      <system value="other"/>
-      <value value="http://standardhealthrecord.org"/>
-      <rank value="0"/>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cic"/>
     </telecom>
   </contact>
-  <date value="2019-04-17T00:00:00-04:00"/>
-  <description value="Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used."/>
-  <immutable value="false"/>
+  <description value="Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.&#xA;&#xA;Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)."/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>
@@ -295,7 +292,7 @@
         <display value="Hepatectomy"/>
       </concept>
       <concept>
-        <code value="13600000000000000"/>
+        <code value="13580001000004101"/>
         <display value="Excision of tumor of liver"/>
       </concept>
       <concept>
